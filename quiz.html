@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Quizify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1 class="logo">Quizify</h1>
+    </header>
+    <main class="container">
+        <!-- Quiz Taker Section -->
+        <section id="quiz-taker-section" class="fade-in">
+            <h2 id="quiz-taker-title"></h2>
+            <div id="quiz-content" class="card"></div>
+            <button id="quiz-submit-btn" class="btn btn-primary btn-full-width mt-1" style="display: none;">Submit Quiz</button>
+            <div id="quiz-taker-results" class="card mt-1 fade-in" style="display: none;">
+                <h3>Quiz Complete!</h3>
+                <p id="quiz-taker-score"></p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

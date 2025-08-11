@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Quizify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1 class="logo">Quizify</h1>
+        <nav id="nav-menu" class="nav-menu">
+            <span id="welcome-message" class="welcome-message"></span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+    </header>
+    <main class="container">
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="fade-in">
+            <div class="dashboard-header">
+                <h2>My Quizzes</h2>
+                <button id="create-quiz-btn" class="btn btn-primary">Create New Quiz</button>
+            </div>
+            <div class="card">
+                <ul id="quiz-list" class="quiz-list"></ul>
+            </div>
+        </section>
+
+        <!-- Quiz Creation Section -->
+        <section id="create-quiz-section" class="fade-in" style="display: none;">
+            <h2>Create a New Quiz</h2>
+            <form id="create-quiz-form" class="card">
+                <div class="form-group">
+                    <label for="quiz-title">Quiz Title</label>
+                    <input type="text" id="quiz-title" required>
+                </div>
+                <div id="questions-container">
+                    <h3 class="questions-heading">Questions</h3>
+                </div>
+                <button type="button" id="add-question-btn" class="btn btn-secondary btn-full-width">Add Question</button>
+                <div class="alert error" id="quiz-creation-error-message" style="display: none;"></div>
+                <button type="submit" class="btn btn-primary btn-full-width mt-1">Create Quiz</button>
+            </form>
+            <div id="share-link-section" class="card mt-1 fade-in" style="display: none;">
+                <h3>Quiz Created! 🎉</h3>
+                <p>Share this link with participants:</p>
+                <div class="link-container">
+                    <p id="share-link-text"></p>
+                    <button class="btn btn-secondary" id="copy-link-btn">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Results Section -->
+        <section id="quiz-results-section" class="fade-in" style="display: none;">
+            <h2 id="results-quiz-title"></h2>
+            <div id="results-content" class="card">
+                <p id="results-empty-message" style="display: none;">No one has taken this quiz yet.</p>
+                <table id="scores-table" class="results-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Participant</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <button id="back-to-dashboard-from-results-btn" class="btn btn-secondary btn-full-width mt-1">Back to Home</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
